@@ -136,11 +136,10 @@ jobs:
         run: |
           echo "version=$(uv run hatch --quiet version)" >> $GITHUB_OUTPUT
 
-      - name: Build and publish
-        if: ${{ steps.tag.outputs.version }} == ${{ steps.module.outputs.version}}
-        env:
-          HATCH_INDEX_USER: ${{ secrets.PYPI_USERNAME }}
-          HATCH_INDEX_AUTH: ${{ secrets.PYPI_PASSWORD }}
+      - name: Build
         run: |
           uv run hatch build 
-          uv run hatch publish
+
+      - name: Publish package distributions to PyPI
+        if: ${{ steps.tag.outputs.version }} == ${{ steps.module.outputs.version}}
+        uses: pypa/gh-action-pypi-publish@release/v1
