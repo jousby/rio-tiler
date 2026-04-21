@@ -58,6 +58,7 @@ dev = [
     "IPython",
     "jupyter",
     "matplotlib",
+    "pyinstrument",
 ]
 
 performance = [
