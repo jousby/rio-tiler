@@ -3384,6 +3384,19 @@ wheels = [
 ]
 
 [[package]]
+name = "pytest-async-benchmark"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytest" },
+    { name = "rich" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d5/09/7034885e055ad6f449f97e0b9a0e06343ac17f01bf2a5cc94b5e546f7680/pytest_async_benchmark-0.2.0.tar.gz", hash = "sha256:eed7eb2ec810709f263db3234add2bc2f50ca5553c083f98bcce2ec86634df65", size = 181471, upload-time = "2025-05-28T20:18:45.49Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/17/0ff79598ff109e8df60dcd455bcb98fef00281491a2f8a425a039815345d/pytest_async_benchmark-0.2.0-py3-none-any.whl", hash = "sha256:7d2cd23c6c2ce2630849c38b9eb742df1b74ea378ecc53ca7b7754ba9bdc3683", size = 18799, upload-time = "2025-05-28T20:18:43.533Z" },
+]
+
+[[package]]
 name = "pytest-asyncio"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -3883,6 +3896,7 @@ docs = [
     { name = "pygments" },
 ]
 performance = [
+    { name = "pytest-async-benchmark" },
     { name = "pytest-benchmark" },
     { name = "tilebench" },
 ]
@@ -3944,6 +3958,7 @@ docs = [
     { name = "pygments" },
 ]
 performance = [
+    { name = "pytest-async-benchmark" },
     { name = "pytest-benchmark" },
     { name = "tilebench" },
 ]
